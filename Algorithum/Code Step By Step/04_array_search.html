@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search Element In A Array</title>
+    <script>
+      let arr = [1, 2, 3, 4, 5];
+      // let item = 3;
+      // let index = undefined;
+
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (arr[i] === item) {
+      //     index = i;
+      //     break;
+      //   }
+      // }
+
+      // console.log(`Index is ${index}`);
+      // delete array of any value
+      // arr.splice(1,1)
+      // console.log(arr);
+
+      console.log(arr);
+      function searchEl() {
+        let item = document.getElementById("item").value;
+        let index = undefined;
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === parseInt(item)) {
+            index = i;
+            break;
+          }
+        }
+        console.log(`Value ${item} of Index is ${index}`);
+        document.getElementById("item").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="item" placeholder="Enter value" />
+    <button onclick="searchEl()">Search</button>
+  </body>
+</html>

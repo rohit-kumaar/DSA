@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Merge Two Array</title>
+    <script>
+    const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [32, 33, 34];
+let result = [];
+let a1 = 0;
+let a2 = 0;
+let r1 = 0;
+
+while (a1 < arr1.length && a2 < arr2.length) {
+  if (arr1[a1] < arr2[a2]) {
+    result[r1] = arr1[a1];
+    r1++;
+    a1++;
+  } else {
+    result[r1] = arr2[a2];
+    r1++;
+    a2++;
+  }
+}
+
+while (a2 < arr2.length) {
+  result[r1] = arr2[a2];
+  r1++;
+  a2++;
+}
+
+console.log(result);
+    </script>
+  </head>
+  <body></body>
+</html>
