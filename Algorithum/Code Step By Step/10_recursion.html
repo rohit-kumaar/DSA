@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recursion</title>
+    <script>
+      // -----01-----
+      //   let num = 0;
+      //   function recursion(num) {
+      //     console.log(num);
+
+      //     if (num < 10) {
+      //       recursion(num + 1);
+      //     }
+      //   }
+      //   recursion(num); 
+
+      // ------02------
+      function factorial(x) {
+        if (x < 0) return console.log("Error!");
+        if (x === 0) return 1;
+        return x * factorial(x - 1);
+      }
+      let data = 5;
+      console.log(factorial(data));
+    </script>
+  </head>
+  <body></body>
+</html>
