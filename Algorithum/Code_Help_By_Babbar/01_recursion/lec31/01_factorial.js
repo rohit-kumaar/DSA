@@ -1,4 +1,4 @@
-const factNum = 5;
+const factNum = 500;
 
 function factorial(n) {
   if (n === 0) return 1;
