@@ -13,8 +13,21 @@
       //       if (i == position) arr[i] = newEl;
       //     }
       //   }
+      // console.log(arr);
 
-      console.log(arr);
+      // --> OR
+
+      // let numbers = [1, 2, 3, 4, 5];
+      // let newNumber = 6;
+      // let indexToInsert = 2;
+
+      // numbers[numbers.length] = 0; // add a placeholder element at the end
+      // for (let i = numbers.length - 1; i > indexToInsert; i--) {
+      //   numbers[i] = numbers[i - 1]; // shift elements to the right
+      // }
+      // numbers[indexToInsert] = newNumber; // insert the new number
+
+      // console.log(numbers); // Output: [1, 2, 6, 3, 4, 5]
 
       function insertEl() {
         let newEl = document.getElementById("newEl").value;
