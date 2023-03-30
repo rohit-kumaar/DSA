@@ -1,20 +1,26 @@
-let arr = [1, 2, 2, 3, 4, 4, 5, 6, 6];
-let result = [];
+const array = [5, 5, 2, 3, 2, 4, 6, 5, 6, 7, 8, 2, 1, 3, 4, 2, 3, 4, 5];
+const notDuplicate = [];
+let notDuplicateLength = notDuplicate.length;
 
-function removeDuplicate(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let exists = false;
-    for (let j = 0; j < result.length; j++) {
-      if (arr[i] === result[j]) {
-        exists = true;
+function removeDuplicate(array) {
+  for (let i = 0; i < array.length; i++) {
+    let exist = false;
+
+    for (let j = 0; j < notDuplicate.length; j++) {
+      if (array[i] === notDuplicate[j]) {
+        exist = true;
         break;
       }
     }
-    if (!exists) {
-      result.push(arr[i]);
+
+    if (!exist) {
+      notDuplicate[notDuplicateLength] = array[i];
+      notDuplicateLength++;
     }
   }
-  return result;
+
+  return notDuplicate;
 }
-removeDuplicate(arr);
+
+let result = removeDuplicate(array);
 console.log(result);
