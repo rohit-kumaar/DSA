@@ -3,14 +3,12 @@
 // stringPattern Search ("lollipop", "lol") --> 1
 // stringPatternSearch ("lolol", "lol") --> 2
 
-function stringPatternSearch(text, pattern) {
+function stringPatternSearch(arr, pattern) {
   let count = 0;
 
-  for (let i = 0; i < text.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < pattern.length; j++) {
-      let patternChar = pattern[j];
-
-      if (patternChar !== text[i + j]) {
+      if (pattern[j] !== arr[i + j]) {
         break;
       }
 
