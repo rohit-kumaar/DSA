@@ -1,14 +1,16 @@
-// 1991. Find the Middle Index in Array
+function palindromeNumber(num) {
+  let stringNumber = num.toString();
+  let result = "";
 
-function middleIndex(arr) {
-  for (let i = 0; i <= arr.length - 1; i++) {
-    for (let j = 1; j <= arr.length - 1; j++) {
-      let rightValue = arr[j] + arr[j + 1];
-      console.log(rightValue);
-    }
+  for (let i = stringNumber.length - 1; i >= 0; i--) {
+    result = result + stringNumber[i];
+    result = Number(result);
   }
+  return result === num ;
 }
 
-const arr = [2, 3, -1, 8, 4];
-const result = middleIndex(arr);
+const num = 121;
+const result = palindromeNumber(num);
 console.log(result);
+
+console.log(~~54.3);
