@@ -133,21 +133,23 @@ using namespace std;
 /* ---------------- */
 // Sum from 1 to n
 /* ---------------- */
-// int main()
-// {
-//     int n;
-//     cout << "Enter the value of n : " << endl;
-//     cin >> n;
+int main()
+{
+    int n;
+    cout << "Enter the value of n : " << endl;
+    cin >> n;
 
-//     int sum = 0;
+    int sum = 0;
 
-//     for (int i = 1; i <= n; i++)
-//     {
-//         sum = sum + i;
-//     }
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     sum = sum + i;
+    // }
 
-//     cout << "Sum from 1 to n : " << sum << endl;
-// }
+    sum = (n * (n + 1))/2;
+
+    cout << "Sum from 1 to n : " << sum << endl;
+}
 
 /* ------------------------- */
 // Fibonacci Series Question
@@ -289,15 +291,15 @@ using namespace std;
 /* ---------------- */
 // Variable Scoping
 /* ---------------- */
-int main()
-{
+// int main()
+// {
 
-    int a = 3;
-    cout << a << endl;
+//     int a = 3;
+//     cout << a << endl;
 
-    if (true)
-    {
-        int a = 5;
-        cout << a << endl;
-    }
-}
+//     if (true)
+//     {
+//         int a = 5;
+//         cout << a << endl;
+//     }
+// }
