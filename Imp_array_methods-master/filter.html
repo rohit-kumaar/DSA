@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array | Combined | Methods</title>
+    <script src="script.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <h1>Filter Method's</h1>
+    <div class="swiper-wrapper" aria-live="polite">
+      <span
+        class="swiper-slide swiper-slide-active"
+        data-value="10000"
+        role="group"
+        aria-label="1 / 91"
+      >
+        <i>10,000</i>
+      </span>
+
+      <span
+        class="swiper-slide swiper-slide-next"
+        data-value="11000"
+        role="group"
+        aria-label="2 / 91"
+      ></span>
+
+      <span
+        class="swiper-slide"
+        data-value="12000"
+        role="group"
+        aria-label="3 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="13000"
+        role="group"
+        aria-label="4 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="14000"
+        role="group"
+        aria-label="5 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="15000"
+        role="group"
+        aria-label="6 / 91"
+        ><i>15,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="16000"
+        role="group"
+        aria-label="7 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="17000"
+        role="group"
+        aria-label="8 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="18000"
+        role="group"
+        aria-label="9 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="19000"
+        role="group"
+        aria-label="10 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="20000"
+        role="group"
+        aria-label="11 / 91"
+        ><i>20,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="21000"
+        role="group"
+        aria-label="12 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="22000"
+        role="group"
+        aria-label="13 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="23000"
+        role="group"
+        aria-label="14 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="24000"
+        role="group"
+        aria-label="15 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="25000"
+        role="group"
+        aria-label="16 / 91"
+        ><i>25,000</i></span
+      ><span
+        class="swiper-slide"
+        data-value="26000"
+        role="group"
+        aria-label="17 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="27000"
+        role="group"
+        aria-label="18 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="28000"
+        role="group"
+        aria-label="19 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="29000"
+        role="group"
+        aria-label="20 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="30000"
+        role="group"
+        aria-label="21 / 91"
+        ><i>30,000</i></span
+      ><span
+        class="swiper-slide"
+        data-value="31000"
+        role="group"
+        aria-label="22 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="32000"
+        role="group"
+        aria-label="23 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="33000"
+        role="group"
+        aria-label="24 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="34000"
+        role="group"
+        aria-label="25 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="35000"
+        role="group"
+        aria-label="26 / 91"
+        ><i>35,000</i></span
+      ><span
+        class="swiper-slide"
+        data-value="36000"
+        role="group"
+        aria-label="27 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="37000"
+        role="group"
+        aria-label="28 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="38000"
+        role="group"
+        aria-label="29 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="39000"
+        role="group"
+        aria-label="30 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="40000"
+        role="group"
+        aria-label="31 / 91"
+        ><i>40,000</i></span
+      ><span
+        class="swiper-slide"
+        data-value="41000"
+        role="group"
+        aria-label="32 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="42000"
+        role="group"
+        aria-label="33 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="43000"
+        role="group"
+        aria-label="34 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="44000"
+        role="group"
+        aria-label="35 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="45000"
+        role="group"
+        aria-label="36 / 91"
+        ><i>45,000</i></span
+      ><span
+        class="swiper-slide"
+        data-value="46000"
+        role="group"
+        aria-label="37 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="47000"
+        role="group"
+        aria-label="38 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="48000"
+        role="group"
+        aria-label="39 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="49000"
+        role="group"
+        aria-label="40 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="50000"
+        role="group"
+        aria-label="41 / 91"
+        ><i>50,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="51000"
+        role="group"
+        aria-label="42 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="52000"
+        role="group"
+        aria-label="43 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="53000"
+        role="group"
+        aria-label="44 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="54000"
+        role="group"
+        aria-label="45 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="55000"
+        role="group"
+        aria-label="46 / 91"
+        ><i>55,000</i></span
+      ><span
+        class="swiper-slide"
+        data-value="56000"
+        role="group"
+        aria-label="47 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="57000"
+        role="group"
+        aria-label="48 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="58000"
+        role="group"
+        aria-label="49 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="59000"
+        role="group"
+        aria-label="50 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="60000"
+        role="group"
+        aria-label="51 / 91"
+        ><i>60,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="61000"
+        role="group"
+        aria-label="52 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="62000"
+        role="group"
+        aria-label="53 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="63000"
+        role="group"
+        aria-label="54 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="64000"
+        role="group"
+        aria-label="55 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="65000"
+        role="group"
+        aria-label="56 / 91"
+        ><i>65,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="66000"
+        role="group"
+        aria-label="57 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="67000"
+        role="group"
+        aria-label="58 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="68000"
+        role="group"
+        aria-label="59 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="69000"
+        role="group"
+        aria-label="60 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="70000"
+        role="group"
+        aria-label="61 / 91"
+        ><i>70,000</i></span
+      ><span
+        class="swiper-slide"
+        data-value="71000"
+        role="group"
+        aria-label="62 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="72000"
+        role="group"
+        aria-label="63 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="73000"
+        role="group"
+        aria-label="64 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="74000"
+        role="group"
+        aria-label="65 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="75000"
+        role="group"
+        aria-label="66 / 91"
+        ><i>75,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="76000"
+        role="group"
+        aria-label="67 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="77000"
+        role="group"
+        aria-label="68 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="78000"
+        role="group"
+        aria-label="69 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="79000"
+        role="group"
+        aria-label="70 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="80000"
+        role="group"
+        aria-label="71 / 91"
+        ><i>80,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="81000"
+        role="group"
+        aria-label="72 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="82000"
+        role="group"
+        aria-label="73 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="83000"
+        role="group"
+        aria-label="74 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="84000"
+        role="group"
+        aria-label="75 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="85000"
+        role="group"
+        aria-label="76 / 91"
+        ><i>85,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="86000"
+        role="group"
+        aria-label="77 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="87000"
+        role="group"
+        aria-label="78 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="88000"
+        role="group"
+        aria-label="79 / 91"
+      ></span>
+      <span
+        class="swiper-slide"
+        data-value="89000"
+        role="group"
+        aria-label="80 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="90000"
+        role="group"
+        aria-label="81 / 91"
+        ><i>90,000</i></span
+      >
+      <span
+        class="swiper-slide"
+        data-value="91000"
+        role="group"
+        aria-label="82 / 91"
+      ></span
+      ><span
+        class="swiper-slide"
+        data-value="92000"
+        role="group"
+        aria-label="83 / 91"
+      ></span>
+
+      <span
+        class="swiper-slide"
+        data-value="93000"
+        role="group"
+        aria-label="84 / 91"
+      ></span>
+
+      <span
+        class="swiper-slide"
+        data-value="94000"
+        role="group"
+        aria-label="85 / 91"
+      ></span>
+
+      <span
+        class="swiper-slide"
+        data-value="95000"
+        role="group"
+        aria-label="86 / 91"
+        ><i>95,000</i></span
+      >
+    </div>
+  </body>
+</html>
