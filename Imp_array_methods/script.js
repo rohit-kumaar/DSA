@@ -9,11 +9,11 @@ function loadScript(url) {
 // loadScript("./map_filter_sort_reduce.js");
 // loadScript("./filter.js");
 // loadScript("./forEach.js");
-loadScript("./map.js");
+// loadScript("./map.js");
 // loadScript("./reduce.js");
 // loadScript("./some.js");
 // loadScript("./every.js");
-// loadScript("./find.js");
+loadScript("./find.js");
 // loadScript("./findIndex.js");
 // loadScript("./object.js");
 // loadScript("./array.js");
