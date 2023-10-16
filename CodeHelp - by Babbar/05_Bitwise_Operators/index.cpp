@@ -1,42 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// int main()
-// {
-
-//     int a = 4;
-//     int b = 6;
-
-//     cout << " a&b = " << (a & b) << endl;
-//     cout << " a|b = " << (a | b) << endl;
-//     cout << " ~a = " << ~a << endl;
-//     cout << " a^b = " << (a ^ b) << endl;
-// }
-
-/* ---------------- */
-// Experimentation
-/* ---------------- */
-// int main()
-// {
-//     cout << (17 >> 1) << endl;
-//     cout << (17 >> 2) << endl;
-//     cout << (19 << 1) << endl;
-//     cout << (21 << 2) << endl;
-// }
-
-/* ------------------------------------- */
-// Pre/Post Increment/Decrement Operator
-/* ------------------------------------- */
-// int main()
-// {
-//     int i = 7;
-
-//     cout << (++i) << endl; // i = 8
-//     cout << (i++) << endl; // i = 8
-//     cout << (i--) << endl; // i = 9
-//     cout << (--i) << endl; // i = 7
-// }
-
 /* ------------------------- */
 // Homework Output Questions
 /* ------------------------- */
@@ -90,133 +54,6 @@ using namespace std;
 
 //     cout << "b : " << b << endl; // 1
 //     cout << "c : " << c << endl; // 3
-// }
-
-/* --------- */
-// For Loop
-/* --------- */
-// int main()
-// {
-//     // int n;
-//     // cout << "Enter the value of n : " << endl;
-//     // cin >> n;
-
-//     // cout << "Printing count from 0 to n" << endl;
-//     // for (int i = 1; i <= n; i++)
-//     // {
-//     //     cout << "The value of n : " << i << endl;
-//     // }
-
-//     // OR int i = 1;
-//     // for (;;)
-//     // {
-//     //     if (i <= n)
-//     //     {
-//     //         cout << "The value of n : " << i << endl;
-//     //     }
-//     //     else
-//     //     {
-//     //         break;
-//     //     }
-
-//     //     i++;
-//     // }
-
-//     for (int a = 0, b = 1, c = 2; a >= 0 && b >= 1 && c >= 2; a--, b--, c--)
-//     {
-//         cout << "a : " << a << endl;
-//         cout << "b : " << b << endl;
-//         cout << "c : " << c << endl;
-//     }
-// }
-
-/* ---------------- */
-// Sum from 1 to n
-/* ---------------- */
-int main()
-{
-    int n;
-    cout << "Enter the value of n : " << endl;
-    cin >> n;
-
-    int sum = 0;
-
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     sum = sum + i;
-    // }
-
-    sum = (n * (n + 1))/2;
-
-    cout << "Sum from 1 to n : " << sum << endl;
-}
-
-/* ------------------------- */
-// Fibonacci Series Question
-/* ------------------------- */
-// int main()
-// {
-//     int n;
-//     cout << "Enter The value of n : " << endl;
-//     cin >> n;
-
-//     int a = 0;
-//     int b = 1;
-//     cout << a << " " << b << " ";
-
-//     for (int i = 1; i <= n; i++)
-//     {
-
-//         int fib = a + b;
-//         cout << fib << " ";
-
-//         a = b;
-//         b = fib;
-//     }
-// }
-
-/* ------------ */
-// Prime Number
-/* ------------ */
-// int main()
-// {
-//     int n;
-//     cout << "Enter the number : " << endl;
-//     cin >> n;
-
-//     bool isPrime = 1;
-
-//     for (int i = 2; i < n; i++)
-//     {
-//         if (n % i == 0)
-//         {
-//             isPrime = 0;
-//             break;
-//         }
-//     }
-
-//     if (isPrime == 0)
-//     {
-//         cout << "NOT a Prime number" << endl;
-//     }
-//     else
-//     {
-//         cout << "Is Prime number" << endl;
-//     }
-// }
-
-/* -------- */
-// Continue
-/* -------- */
-// int main()
-// {
-//     for (int i = 0; i < 5; i++)
-//     {
-//         cout << "1st" << endl;
-//         cout << "2nd" << endl;
-//         continue;
-//         cout << "Last" << endl;
-//     }
 // }
 
 /* ------------------------- */
@@ -285,21 +122,5 @@ int main()
 
 //             cout << i << " " << j << endl;
 //         }
-//     }
-// }
-
-/* ---------------- */
-// Variable Scoping
-/* ---------------- */
-// int main()
-// {
-
-//     int a = 3;
-//     cout << a << endl;
-
-//     if (true)
-//     {
-//         int a = 5;
-//         cout << a << endl;
 //     }
 // }
