@@ -5,7 +5,6 @@ const find = companies.find((element) => element.category === "Auto");
 console.log(find);
 
 
-
 const users = [
     { id: 1, userName: "Rohit", password: "rohit123" },
     { id: 2, userName: "Bibhu", password: "bibhu123" },
