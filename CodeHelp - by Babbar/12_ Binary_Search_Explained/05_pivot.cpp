@@ -26,5 +26,5 @@ int pivot(int arr[], int size)
 int main()
 {
     int arr[] = {8, 10, 17, 1, 3};
-    cout << "Find pivot in an array : " << pivot(arr, 5) << endl;
+    cout << "Find pivot index in an array : " << pivot(arr, 5) << endl;
 }
