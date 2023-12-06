@@ -8,7 +8,7 @@ bool isPossible(int arr[], int size, int student, int midVal)
 
     for (int i = 0; i < size; i++)
     {
-        if (pageSum + arr[i] < midVal)
+        if (pageSum + arr[i] <= midVal)
         {
             pageSum += arr[i];
         }
@@ -27,16 +27,16 @@ bool isPossible(int arr[], int size, int student, int midVal)
 
 int main()
 {
-    int arr[] = {10, 20, 30, 40};
+    int pages[] = {10, 20, 30, 40};
     int size = 4;
     int student = 2;
 
     int startVal = 0;
     int sum = 0;
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < 4; i++)
     {
-        sum += arr[i];
+        sum += pages[i];
     }
 
     int endVal = sum;
@@ -45,7 +45,7 @@ int main()
 
     while (startVal <= endVal)
     {
-        if (isPossible(arr, size, student, midVal))
+        if (isPossible(pages, size, student, midVal))
         {
             ans = midVal;
             endVal = midVal - 1;
