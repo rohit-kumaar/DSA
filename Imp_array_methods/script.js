@@ -13,7 +13,7 @@ function loadScript(url) {
 // loadScript("./reduce.js");
 // loadScript("./some.js");
 // loadScript("./every.js");
-loadScript("./find.js");
+// loadScript("./find.js");
 // loadScript("./findIndex.js");
 // loadScript("./object.js");
 // loadScript("./array.js");
@@ -26,6 +26,6 @@ loadScript("./find.js");
 // loadScript("./optional-chaining.js");
 // loadScript("./promise.js");
 // loadScript("./async_await.js");
-// loadScript("./event_bubbling.js");
+loadScript("./event_bubbling.js");
 // loadScript("./closure.js");
 // loadScript("./curring.js");
