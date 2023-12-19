@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <button onclick="counter1()">Submit <span id="btn1"> 0</span></button>
+    <button onclick="counter2()">Submit <span id="btn2">0</span></button>
+
+    <script>
+      function counter(id) {
+        let count = 0;
+
+        return function () {
+          count++;
+          document.getElementById(id).innerText = count;
+        };
+      }
+
+      const counter1 = counter("btn1");
+      const counter2 = counter("btn2");
+    </script>
+  </body>
+</html>
