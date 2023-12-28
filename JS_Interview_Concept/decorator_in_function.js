@@ -10,7 +10,7 @@ function memoize(fs) {
     if (map.has(x)) {
       return map.get(x);
     } else {
-      const result = fx(x);
+      const result = fs(x);
       map.set(x, result);
       return result;
     }

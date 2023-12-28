@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debouncing</title>
+  </head>
+  <body>
+    <script>
+      let count = 1;
+      function showCount() {
+        count++;
+        console.log({ count });
+      }
+
+      function debounce(fs, time) {
+        let id = null;
+        return function () {
+          if (id) {
+            clearTimeout(id);
+          }
+          id = setTimeout(fs, time);
+        };
+      }
+
+      const showCountD = debounce(showCount, 2000);
+      setTimeout(showCountD, 2000);
+      setTimeout(showCountD, 4000);
+      setTimeout(showCountD, 6000);
+      setTimeout(showCountD, 8000);
+    </script>
+  </body>
+</html>
