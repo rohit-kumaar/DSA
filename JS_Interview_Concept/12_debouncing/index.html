@@ -22,7 +22,10 @@
           if (id) {
             clearTimeout(id);
           }
-          id = setTimeout(fs, time, x);
+          id = setTimeout(() => {
+            fs(x);
+            id = null;
+          }, time);
         };
       }
 
@@ -45,3 +48,6 @@
     </script>
   </body>
 </html>
+
+
+
