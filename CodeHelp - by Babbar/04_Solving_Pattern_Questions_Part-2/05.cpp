@@ -11,22 +11,22 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int num;
+    cout << "Enter a number : ";
+    cin >> num;
 
-    int i = 1;
-
-    while (i <= n)
+    int count = 1;
+    int row = 1;
+    while (row <= num)
     {
-
-        int j = 1;
-        while (j <= i)
+        int col = 1;
+        while (col <= row)
         {
-            cout << i << " ";
-            j = j + 1;
+            cout << row << " ";
+            count++;
+            col++;
         }
         cout << endl;
-
-        i = i + 1;
+        row++;
     }
 }

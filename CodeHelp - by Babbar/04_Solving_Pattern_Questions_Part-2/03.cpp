@@ -9,24 +9,24 @@ using namespace std;
 
 int main()
 {
+    int num;
+    cout << "Enter a number : ";
+    cin >> num;
 
-    int n;
-    cin >> n;
-
-    int i = 1;
     int count = 1;
-    while (i <= n)
-    {
+    int row = 1;
 
-        int j = 1;
-        while (j <= n)
+    while (row <= num)
+    {
+        int col = 1;
+
+        while (col <= num)
         {
             cout << count << " ";
-            count = count + 1;
-            j = j + 1;
+            count++;
+            col++;
         }
         cout << endl;
-
-        i = i + 1;
+        row++;
     }
 }
