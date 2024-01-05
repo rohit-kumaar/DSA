@@ -13,20 +13,23 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
 
-    int i = 1;
-    while (i <= n)
+    int row = 1;
+
+    while (row <= num)
     {
-        int j = 1;
-        while (j <= n)
+        int col = 1;
+
+        while (col <= num)
         {
-            char start = i + j - 2 + 'A';
-            cout << start << " ";
-            j = j + 1;
+            char result = 'A' + col + row - 2;
+            cout << result << " ";
+            col++;
         }
         cout << endl;
-        i = i + 1;
+        row++;
     }
 }

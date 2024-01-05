@@ -11,23 +11,23 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
+
     int count = 1;
-    int i = 1;
+    int row = 1;
 
-    while (i <= n)
+    while (row <= num)
     {
-
-        int j = 1;
-        while (j <= i)
+        int col = 1;
+        while (col <= row)
         {
             cout << count << " ";
-            count = count + 1;
-            j = j + 1;
+            count++;
+            col++;
         }
         cout << endl;
-
-        i = i + 1;
+        row++;
     }
 }

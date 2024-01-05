@@ -12,23 +12,24 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
 
-    int i = 1;
-    char count = 'A';
-    while (i <= n)
+    int count = 1;
+    int row = 1;
+
+    while (row <= num)
     {
-
-        int j = 1;
-        while (j <= i)
+        int col = 1;
+        while (col <= row)
         {
-            cout << count << " ";
-            count = count + 1;
-            j = j + 1;
+            char result = 'A' + count - 1;
+            cout << result << " ";
+            count++;
+            col++;
         }
-
         cout << endl;
-        i = i + 1;
+        row++;
     }
 }
