@@ -3,36 +3,38 @@
 #include <iostream>
 using namespace std;
 
-/* ------ */
-// * * * *
-//   * * *
-//     * *
-//       *
-/* ------ */
+/* ----------- */
+// * * * * *
+//   * * * *
+//     * * *
+//       * *
+//         *
+/* ----------- */
 
 int main()
 {
-    int n;
-    cin >> n;
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
 
-    int i = 1;
-    while (i <= n)
+    int row = 1;
+    while (row <= num)
     {
-        int space = i - 1;
+        int space = row - 1;
         while (space)
         {
             cout << " ";
-            space = space - 1;
+            space--;
         }
 
-        int j = 1;
-        while (j <= n - i + 1)
+        int col = 1;
+        int printStar = num - row + 1;
+        while (col <= printStar)
         {
             cout << "*";
-            j = j + 1;
+            col++;
         }
-
         cout << endl;
-        i = i + 1;
+        row++;
     }
 }

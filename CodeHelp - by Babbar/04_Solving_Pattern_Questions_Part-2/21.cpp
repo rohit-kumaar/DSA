@@ -12,29 +12,28 @@ using namespace std;
 
 int main()
 {
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
 
-    int n;
-    cin >> n;
-
-    int i = 1;
-    while (i <= n)
+    int row = 1;
+    while (row <= num)
     {
-
-        int space = i - 1;
+        int space = row - 1;
         while (space)
         {
             cout << " ";
-            space = space - 1;
+            space--;
         }
 
-        int j = 1;
-        while (j <= n - i + 1)
+        int col = 1;
+        int printNum = num - row + 1;
+        while (col <= printNum)
         {
-            cout << i;
-            j = j + 1;
+            cout << row;
+            col++;
         }
-
         cout << endl;
-        i = i + 1;
+        row++;
     }
 }

@@ -11,27 +11,28 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
 
-    int i = 1;
-    while (i <= n)
+    int row = 1;
+    while (row <= num)
     {
-        int space = n - i;
+        int space = num - row;
         while (space)
         {
             cout << " ";
-            space = space - 1;
+            space--;
         }
 
-        int j = 1;
-        while (j <= i)
+        int col = 1;
+        while (col <= row)
         {
             cout << "*"
                  << " ";
-            j = j + 1;
+            col++;
         }
         cout << endl;
-        i = i + 1;
+        row++;
     }
 }

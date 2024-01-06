@@ -2,31 +2,32 @@
 #include <iostream>
 using namespace std;
 
-// 19
 /* -------------- */
-//  *  *  *  *  *
-//  *  *  *  *
-//  *  *  *
-//  *  *
-//  *
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
 /* -------------- */
 
 int main()
 {
-    int n;
-    cin >> n;
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
 
-    int i = 1;
-
-    while (i <= n)
+    int row = 1;
+    while (row <= num)
     {
-        int j = 1;
-        while (j <= n - i + 1)
+        int col = 1;
+        int printStart = num - row + 1;
+        while (col <= printStart)
         {
-            cout << " * ";
-            j = j + 1;
+            cout << "*"
+                 << " ";
+            col++;
         }
         cout << endl;
-        i = i + 1;
+        row++;
     }
 }
