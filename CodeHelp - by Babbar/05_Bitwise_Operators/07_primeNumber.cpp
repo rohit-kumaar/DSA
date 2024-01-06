@@ -3,27 +3,27 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Enter the number : " << endl;
-    cin >> n;
+    int num;
+    cout << "Enter the number : ";
+    cin >> num;
 
-    bool isPrime = 1;
+    bool isPrime = true;
 
-    for (int i = 2; i < n; i++)
+    for (int i = 2; i < num; i++)
     {
-        if (n % i == 0)
+        if (num % i == 0)
         {
-            isPrime = 0;
+            isPrime = false;
             break;
         }
     }
 
-    if (isPrime == 0)
+    if (isPrime == false)
     {
-        cout << "NOT a Prime number" << endl;
+        cout << "The given number " << num << " is NOT prime number" << endl;
     }
     else
     {
-        cout << "Is Prime number" << endl;
+        cout << "The given number " << num << " is prime number" << endl;
     }
 }

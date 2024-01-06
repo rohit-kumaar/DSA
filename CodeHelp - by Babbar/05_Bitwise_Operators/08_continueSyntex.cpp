@@ -5,9 +5,9 @@ int main()
 {
     for (int i = 0; i < 5; i++)
     {
-        cout << "1st" << endl;
-        cout << "2nd" << endl;
+        cout << "1st : " << i << endl;
+        cout << "2nd : " << i << endl;
         continue;
-        cout << "Last" << endl;
+        cout << "Last : " << i << endl;
     }
 }
