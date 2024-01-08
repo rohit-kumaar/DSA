@@ -9,7 +9,7 @@ int main()
     cin >> num;
 
     int ans = 0;
-    int power = 0;
+    int i = 0;
 
     while (num != 0)
     {
@@ -17,10 +17,10 @@ int main()
 
         if (digit == 1)
         {
-            ans = ans + pow(2, power);
+            ans = ans + pow(2, i);
         }
         num = num / 10;
-        power++;
+        i++;
     }
     cout << "The decimal number is : " << ans;
 }

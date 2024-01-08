@@ -9,14 +9,14 @@ int main()
     cin >> num;
 
     int ans = 0;
-    int power = 0;
+    int i = 0;
 
     while (num != 0)
     {
         int bit = num & 1;
-        ans = (bit * pow(10, power)) + ans;
+        ans = ans + (bit * pow(10, i));
         num = num >> 1;
-        power++;
+        i++;
     }
 
     cout << "The binary conversion is " << ans;
