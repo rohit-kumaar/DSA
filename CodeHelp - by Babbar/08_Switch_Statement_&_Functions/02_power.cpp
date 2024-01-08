@@ -2,30 +2,20 @@
 #include <iostream>
 using namespace std;
 
-int power(int a, int b)
+int main()
 {
-    int ans = 1;
+    int a, b, ans = 1;
+
+    cout << "Value of a : ";
+    cin >> a;
+
+    cout << "Value of b : ";
+    cin >> b;
 
     for (int i = 1; i <= b; i++)
     {
         ans = ans * a;
     }
 
-    return ans;
-}
-
-int main()
-{
-    int a;
-    cout << "Enter the value of a : ";
-    cin >> a;
-
-    int b;
-    cout << "Enter the value of b : ";
-    cin >> b;
-
-    int result = power(a, b);
-    cout << "Power of the number" << a << "is : " << result << endl;
-
-    return 0;
+    cout << a << "^" << b << " = " << ans;
 }
