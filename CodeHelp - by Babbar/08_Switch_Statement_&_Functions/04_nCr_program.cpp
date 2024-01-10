@@ -28,12 +28,12 @@ int nCr(int n, int r)
 int main()
 {
     int n, r;
-    cout << "Enter the value of n : ";
+    cout << "Total number of item n : ";
     cin >> n;
 
-    cout << "Enter the value of r : ";
+    cout << "Choose r element at a time : ";
     cin >> r;
 
     int result = nCr(n, r);
-    cout << "Given " << n << " objects, the number of different ways to choose " << r << " of them is : " << result << endl;
+    cout << "nCr : " << result;
 }

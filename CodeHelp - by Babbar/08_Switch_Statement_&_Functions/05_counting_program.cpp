@@ -14,7 +14,7 @@ void printCounting(int num)
 int main()
 {
     int n;
-    cout<<"Enter a number n : ";
+    cout << "Enter a number n : ";
     cin >> n;
 
     printCounting(n);
