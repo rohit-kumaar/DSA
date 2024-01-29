@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void printArray(int arr[], int size)
+void printArr(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -10,28 +10,28 @@ void printArray(int arr[], int size)
     cout << endl;
 }
 
-void sort01(int arr[], int n)
+void sort01(int arr[], int size)
 {
-    int left = 0;
-    int right = n - 1;
+    int i = 0;
+    int j = size - 1;
 
-    while (left < right)
+    while (i < j)
     {
-        while (arr[left] == 0 && left < right)
+        while (arr[i] == 0 && i < j)
         {
-            left++;
+            i++;
         }
 
-        while (arr[right] == 1 && left < right)
+        while (arr[j] == 1 && i < j)
         {
-            right--;
+            j--;
         }
 
-        if (left < right)
+        if (i < j)
         {
-            swap(arr[left], arr[right]);
-            left++;
-            right--;
+            swap(arr[i], arr[j]);
+            i++;
+            j--;
         }
     }
 }
@@ -39,7 +39,8 @@ void sort01(int arr[], int n)
 int main()
 {
     int arr[8] = {1, 1, 0, 0, 0, 0, 1, 0};
+    int size = 8;
 
-    sort01(arr, 8);
-    printArray(arr, 8);
+    sort01(arr, size);
+    printArr(arr, size);
 }
