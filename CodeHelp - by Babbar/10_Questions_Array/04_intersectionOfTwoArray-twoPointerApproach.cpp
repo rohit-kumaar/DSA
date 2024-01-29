@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+// i and j is a TWO POINTER APPROACH
 vector<int> intersectionOfTwoArray(int arr1[], int arr2[], int size1, int size2)
 {
     vector<int> result;
