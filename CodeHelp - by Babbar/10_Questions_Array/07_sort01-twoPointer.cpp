@@ -14,7 +14,7 @@ void sort01(int arr[], int size)
 {
     int i = 0;
     int j = size - 1;
-
+    
     while (i < j)
     {
         while (arr[i] == 0 && i < j)
