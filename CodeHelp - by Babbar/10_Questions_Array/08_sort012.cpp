@@ -7,7 +7,7 @@ int swap012(int arr[], int size)
     int mid = 0;
     int high = size - 1;
 
-    while (mid < high)
+    while (mid <= high)
     {
         switch (arr[mid])
         {
@@ -44,7 +44,8 @@ int printOutput(int arr[], int size)
 
 int main()
 {
-    int arr[9] = {0, 2, 2, 1, 0, 1, 1, 0, 2};
+    // int arr[9] = {0, 2, 2, 1, 0, 1, 1, 0, 2};
+    int arr[3] = {2, 0, 1};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     swap012(arr, size);
