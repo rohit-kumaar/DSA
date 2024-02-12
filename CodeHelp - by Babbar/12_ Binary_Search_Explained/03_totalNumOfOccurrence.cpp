@@ -76,7 +76,8 @@ int totalNumOfOcc(int arr[], int size, int key)
 int main()
 {
     int arr[7] = {1, 2, 3, 3, 3, 3, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
     int key = 3;
 
-    cout << "The total num of occurrence number " << key << " is : " << totalNumOfOcc(arr, 7, key) << endl;
+    cout << "The total num of occurrence number " << key << " is : " << totalNumOfOcc(arr, size, key) << endl;
 }

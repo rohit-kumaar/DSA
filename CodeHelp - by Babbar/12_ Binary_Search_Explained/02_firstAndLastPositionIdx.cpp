@@ -64,6 +64,9 @@ int lastOcc(int arr[], int size, int key)
 int main()
 {
     int even[7] = {1, 2, 3, 3, 3, 3, 5};
-    cout << "The first Idx is : " << firstOcc(even, 7, 3) << endl;
-    cout << "The last Idx is : " << lastOcc(even, 7, 3) << endl;
+    int evenSizeArr = sizeof(even) / sizeof(even[0]);
+    int searchVal = 3;
+
+    cout << "The first Idx is : " << firstOcc(even, evenSizeArr, searchVal) << endl;
+    cout << "The last Idx is : " << lastOcc(even, evenSizeArr, searchVal) << endl;
 }

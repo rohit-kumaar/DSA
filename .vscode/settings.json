@@ -6,5 +6,8 @@
         "auditogs",
         "iimf",
         "lolol"
-    ]
+    ],
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

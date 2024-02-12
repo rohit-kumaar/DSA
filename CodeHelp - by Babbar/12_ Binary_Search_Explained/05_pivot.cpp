@@ -17,14 +17,15 @@ int pivot(int arr[], int size)
         {
             endIdx = midIdx;
         }
-
         midIdx = startIdx + (endIdx - startIdx) / 2;
     }
-    return startIdx;
+    return arr[midIdx];
 }
 
 int main()
 {
-    int arr[] = {8, 10, 17, 1, 3};
-    cout << "Find pivot index in an array : " << pivot(arr, 5) << endl;
+    int arr[] = {6, 7, 8, 9, 1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    cout << "Pivot value : " << pivot(arr, size) << endl;
 }
