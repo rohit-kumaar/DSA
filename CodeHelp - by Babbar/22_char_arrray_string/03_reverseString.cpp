@@ -6,7 +6,7 @@ void reverseString(char name[], int length)
     int s = 0;
     int e = length - 1;
 
-    while (s < e)
+    while (e > s)
     {
         swap(name[s++], name[e--]);
     }
@@ -18,6 +18,7 @@ int getLength(char name[])
 
     for (int i = 0; name[i] != 0; i++)
     {
+        cout << "name[i] : " << "i = " << i << " " << name[i] << endl;
         count++;
     }
 
@@ -27,14 +28,13 @@ int getLength(char name[])
 int main()
 {
     char name[20];
-
-    cout << "Enter your name : " << endl;
+    cout << "Enter the string : ";
     cin >> name;
 
     int length = getLength(name);
+    cout << "String length is : " << length << endl;
 
     reverseString(name, length);
-    cout << name << endl;
-
+    cout << "Reverse string is : " << name;
     return 0;
 }
