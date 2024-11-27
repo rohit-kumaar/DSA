@@ -10,18 +10,15 @@ int power(int a, int b)
     if (b == 1)
         return a;
 
-    // recursive call
-    int ans = power(a, b / 2);
-
     // id b is even
     if (b % 2 == 0)
     {
-        return ans * ans;
+        return power(a, b / 2) * power(a, b / 2);
     }
     else
     {
         // if b is odd
-        return a * ans * ans;
+        return a * power(a, b - 1);
     }
 }
 
