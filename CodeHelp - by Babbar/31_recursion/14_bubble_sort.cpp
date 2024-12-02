@@ -6,7 +6,7 @@ void sortArray(int arr[], int size)
     if (size == 0 || size == 1)
         return;
 
-    for (int i = 0; i < size - 1; i++)
+    for (int i = 0; i < size; i++)
     {
         if (arr[i] > arr[i + 1])
         {

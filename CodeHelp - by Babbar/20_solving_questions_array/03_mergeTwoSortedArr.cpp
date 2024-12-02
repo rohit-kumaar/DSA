@@ -21,24 +21,32 @@ void mergeTwoSortedArr(int arr1[], int arr2[], int arr3[], int size1, int size2)
     {
         if (arr1[i] < arr2[j])
         {
-            arr3[k++] = arr1[i++];
+            arr3[k] = arr1[i];
+            k++;
+            i++;
         }
         else
         {
-            arr3[k++] = arr2[j++];
+            arr3[k] = arr2[j];
+            k++;
+            j++;
         }
     }
 
     // copy first remaining array of arr1
     while (i < size1)
     {
-        arr3[k++] = arr1[i++];
+        arr3[k] = arr1[i];
+        k++;
+        i++;
     }
 
     // copy first remaining array of arr2
     while (j < size2)
     {
-        arr3[k++] = arr2[j++];
+        arr3[k] = arr2[j];
+        k++;
+        j++;
     }
 }
 
@@ -50,8 +58,8 @@ int main()
     int arr2[] = {2, 4, 6};
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
 
-    int arr3[8] = {0};
-    int size3 = 8;
+    int size3 = size1 + size2;
+    int arr3[size3] = {0};
 
     mergeTwoSortedArr(arr1, arr2, arr3, size1, size2);
     printArr(arr3, size3);
