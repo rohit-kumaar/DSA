@@ -8,7 +8,9 @@ void reverseString(char name[], int length)
 
     while (e > s)
     {
-        swap(name[s++], name[e--]);
+        swap(name[s], name[e]);
+        s++;
+        e--;
     }
 }
 
