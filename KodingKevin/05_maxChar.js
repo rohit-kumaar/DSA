@@ -1,22 +1,20 @@
-let character = "apple";
-
-const maxChar = (str) => {
-  let charCountObj = {};
+function maxChar(str) {
+  const memo = {};
   let maxChar = "";
   let maxCount = 0;
 
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
 
-    charCountObj[char] = charCountObj[char] + 1 || 1;
+    memo[char] = memo[char] + 1 || 1;
 
-    if (charCountObj[char] > maxCount) {
+    if (memo[char] > maxCount) {
       maxChar = char;
-      maxCount = charCountObj[char];
+      maxCount = memo[char];
     }
   }
 
   return maxChar;
-};
+}
 
-console.log(maxChar(character));
+console.log('maxChar("apple") :>> ', maxChar("apple"));
