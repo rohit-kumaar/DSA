@@ -15,7 +15,15 @@ function memoize(fs) {
     if (map.has(x)) {
       return map.get(x);
     } else {
-      const result = fs.call(this, x);
+      /* --------------------------------- */
+      /* START : Introducing call method   */
+      /* --------------------------------- */
+      const result = fs(x);
+      // const result = fs.call(this, x);
+
+      /* --------------------------------- */
+      /* END   : Introducing call method   */
+      /* --------------------------------- */
       map.set(x, result);
       return result;
     }

@@ -1,3 +1,5 @@
+// A decorator is a function that wraps another function or modify its behavior without changing its original structure.
+
 function heavy(x) {
   console.log(x + " : heavy");
   return x + " : heavy";
