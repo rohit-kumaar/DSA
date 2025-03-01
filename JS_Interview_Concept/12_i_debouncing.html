@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debouncing i</title>
+  </head>
+  <body>
+    <script>
+      let count = 1;
+      function showCount() {
+        count++;
+        console.log({ count });
+      }
+
+      function debounce(fs, time) {
+        let id = null;
+        return function () {
+          if (id) {
+            clearTimeout(id);
+          }
+          id = setTimeout(fs, time);
+        };
+      }
+
+      const showCountD = debounce(showCount, 2000);
+      setTimeout(showCountD, 1000);
+      setTimeout(showCountD, 1500);
+      setTimeout(showCountD, 1800);
+      setTimeout(showCountD, 2100);
+      console.log("Debounce Running");
+    </script>
+  </body>
+</html>

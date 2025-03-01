@@ -3,40 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Debouncing</title>
+    <title>Debouncing ii</title>
   </head>
   <body>
     <input type="text" id="input" />
     <p id="paragraph"></p>
 
     <script>
-      let count = 1;
-      function showCount() {
-        count++;
-        console.log({ count });
-      }
-
       function debounce(fs, time) {
         let id = null;
         return function (x) {
           if (id) {
             clearTimeout(id);
           }
-          id = setTimeout(() => {
-            fs(x);
-            id = null;
-          }, time);
+          id = setTimeout(fs, time, x);
         };
       }
 
-      const showCountD = debounce(showCount, 2000);
-      setTimeout(showCountD, 2000);
-      setTimeout(showCountD, 4000);
-      setTimeout(showCountD, 6000);
-      setTimeout(showCountD, 8000);
-    </script>
-
-    <script>
       const input = document.getElementById("input");
       const paragraph = document.getElementById("paragraph");
       input.addEventListener(
@@ -48,6 +31,3 @@
     </script>
   </body>
 </html>
-
-
-
