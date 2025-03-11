@@ -20,7 +20,7 @@ int binarySearch(int arr[], int size, int key)
         }
         else
         {
-            end = mid + 1;
+            end = mid - 1;
         }
 
         mid = start + (end - start) / 2;
