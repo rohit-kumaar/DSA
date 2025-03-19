@@ -9,11 +9,7 @@ function merge(arr, s, e) {
   let k = s;
 
   while (leftArr.length > i && rightArr.length > j) {
-    if (rightArr[j] > leftArr[i]) {
-      arr[k++] = leftArr[i++];
-    } else {
-      arr[k++] = rightArr[j++];
-    }
+    arr[k++] = rightArr[j] > leftArr[i] ? leftArr[i++] : rightArr[j++];
   }
 
   while (leftArr.length > i) {
