@@ -18,4 +18,6 @@ function binarySearch(arr, search) {
 }
 
 const result = binarySearch(sortedUniqueArr, search);
-console.log(result !== -1 ? `Found at index ${result}` : "Not Found");
+console.log(
+  result !== -1 ? `Found at index ${result} after sorting ` : "Not Found"
+);
