@@ -11,7 +11,7 @@ int main()
     int b = 1;
     cout << a << " " << b << " ";
 
-    for (int i = 2; i < num; i++)
+    for (int i = 2; i <= num; i++)
     {
         int fib = a + b;
         cout << fib << " ";
