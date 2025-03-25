@@ -16,8 +16,8 @@ int climbStair(int n)
 int main()
 {
     int n;
-    cout << "Enter a number : ";
+    cout << "Enter a steps : ";
     cin >> n;
 
-    cout << "Nos. of stairs is : " << climbStair(n) << endl;
+    cout << "Ways to climb to the top : " << climbStair(n) << endl;
 }
