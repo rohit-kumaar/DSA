@@ -1,3 +1,5 @@
+// Your approach is called Bottom-Up DP because: ✅ It starts with the smallest subproblem and builds up to the final answer.
+
 function climbStairs(totalStairs) {
   if (totalStairs <= 2) return totalStairs;
 
