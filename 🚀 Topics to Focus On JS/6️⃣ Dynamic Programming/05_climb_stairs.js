@@ -1,16 +1,16 @@
-function climbStairs(n) {
-  if (n <= 2) return n;
+function climbStairs(totalStairs) {
+  if (totalStairs <= 2) return totalStairs;
 
-  let prev1 = 1;
-  let prev2 = 2;
+  let stair1 = 1;
+  let stair2 = 2;
 
-  for (let i = 3; i <= n; i++) {
-    let curr = prev1 + prev2;
-    prev1 = prev2;
-    prev2 = curr;
+  for (let i = 3; i <= totalStairs; i++) {
+    let currStair = stair1 + stair2;
+    stair1 = stair2;
+    stair2 = currStair;
   }
 
-  return prev2;
+  return stair2;
 }
 
 const res = climbStairs(5);
