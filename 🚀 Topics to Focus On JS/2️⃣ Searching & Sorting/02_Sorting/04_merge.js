@@ -4,19 +4,21 @@ function merge(arr, s, e) {
   const leftArr = arr.slice(s, mid + 1);
   const rightArr = arr.slice(mid + 1, e + 1);
 
-  let i = 0;
-  let j = 0;
-  let k = s;
+  let i = 0, j = 0, k = s;
 
-  while (leftArr.length > i && rightArr.length > j) {
-    arr[k++] = rightArr[j] > leftArr[i] ? leftArr[i++] : rightArr[j++];
+  while (i < leftArr.length && j < rightArr.length) {
+    if (leftArr[i] <= rightArr[j]) {
+      arr[k++] = leftArr[i++];
+    } else {
+      arr[k++] = rightArr[j++];
+    }
   }
 
-  while (leftArr.length > i) {
+  while (i < leftArr.length) {
     arr[k++] = leftArr[i++];
   }
 
-  while (rightArr.length > j) {
+  while (j < rightArr.length) {
     arr[k++] = rightArr[j++];
   }
 }
