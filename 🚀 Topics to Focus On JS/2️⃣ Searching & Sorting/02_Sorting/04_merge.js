@@ -1,44 +1,58 @@
-function merge(arr, s, e) {
-  let mid = Math.floor(s + (e - s) / 2);
+function merge(arr, start, end, temp) {
+  let mid = Math.floor(start + (end - start) / 2);
 
-  const leftArr = arr.slice(s, mid + 1);
-  const rightArr = arr.slice(mid + 1, e + 1);
+  let i = start;
+  let j = mid + 1;
+  let k = start;
 
-  let i = 0, j = 0, k = s;
-
-  while (i < leftArr.length && j < rightArr.length) {
-    if (leftArr[i] <= rightArr[j]) {
-      arr[k++] = leftArr[i++];
+  while (i <= mid && j <= end) {
+    if (arr[i] <= arr[j]) {
+      temp[k] = arr[i];
+      k++;
+      i++;
     } else {
-      arr[k++] = rightArr[j++];
+      temp[k] = arr[j];
+      k++;
+      j++;
     }
   }
 
-  while (i < leftArr.length) {
-    arr[k++] = leftArr[i++];
+  while (i <= mid) {
+    temp[k] = arr[i];
+    k++;
+    i++;
   }
 
-  while (j < rightArr.length) {
-    arr[k++] = rightArr[j++];
+  while (j <= end) {
+    temp[k] = arr[j];
+    k++;
+    j++;
+  }
+
+  // Copy sorted elements back to original array
+  for (let i = start; i <= end; i++) {
+    arr[i] = temp[i];
   }
 }
 
-function mergeSort(arr, s, e) {
-  if (s >= e) return;
+function mergeSort(arr, start, end, temp) {
+  if (start >= end) return; // base case
 
-  let mid = Math.floor(s + (e - s) / 2);
+  let mid = Math.floor(start + (end - start) / 2);
 
-  // Sort left part
-  mergeSort(arr, s, mid);
+  // sort left side
+  mergeSort(arr, start, mid, temp);
 
-  // Sort right part
-  mergeSort(arr, mid + 1, e);
+  // sort right side
+  mergeSort(arr, mid + 1, end, temp);
 
-  merge(arr, s, e);
+  // merge the array
+  merge(arr, start, end, temp);
 }
 
 const arr = [42, 3, 19, 8, 56, 1];
 let start = 0;
 let end = arr.length - 1;
-mergeSort(arr, start, end);
+const temp = new Array(arr.length);
+mergeSort(arr, start, end, temp);
 console.log(arr);

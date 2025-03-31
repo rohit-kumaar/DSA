@@ -1,30 +1,32 @@
-function sortArr(arr) {
-  const len = arr.length;
-  const idx = len - 1;
-  const result = new Array(len);
-  let start = 0;
-  let end = idx;
-  let resultIdx = idx;
+// ❌ incorrect 
 
-  while (end >= start) {
-    let leftArr = arr[start];
-    let rightArr = arr[end];
-    console.log(leftArr, rightArr);
+// function sortArr(arr) {
+//   const len = arr.length;
+//   const idx = len - 1;
+//   const result = new Array(len);
+//   let start = 0;
+//   let end = idx;
+//   let resultIdx = idx;
 
-    if (leftArr > rightArr) {
-      result[resultIdx] = leftArr;
-      resultIdx--;
-      start++;
-    } else {
-      result[resultIdx] = rightArr;
-      resultIdx--;
-      end--;
-    }
-  }
+//   while (end >= start) {
+//     let leftArr = arr[start];
+//     let rightArr = arr[end];
+//     console.log(leftArr, rightArr);
 
-  return result;
-}
+//     if (leftArr > rightArr) {
+//       result[resultIdx] = leftArr;
+//       resultIdx--;
+//       start++;
+//     } else {
+//       result[resultIdx] = rightArr;
+//       resultIdx--;
+//       end--;
+//     }
+//   }
 
-const arr = [4, 1, 0, 3, 10];
-const sortArrResult = sortArr(arr);
-console.log(sortArrResult);
+//   return result;
+// }
+
+// const arr = [4, 1, 0, 3, 10];
+// const sortArrResult = sortArr(arr);
+// console.log(sortArrResult);
