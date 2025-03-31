@@ -8,8 +8,7 @@ function climbStairs(totalStairs) {
 
   for (let i = 3; i <= totalStairs; i++) {
     let currStair = stair1 + stair2;
-    stair1 = stair2;
-    stair2 = currStair;
+    [stair1, stair2] = [stair2, currStair];
   }
 
   return stair2;
