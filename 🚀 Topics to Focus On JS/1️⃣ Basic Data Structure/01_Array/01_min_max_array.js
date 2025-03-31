@@ -1,6 +1,7 @@
 function getMin(arr) {
-  let minNum = Infinity;
+  if (arr.length === 0) return null;
 
+  let minNum = Infinity;
   for (let i = 0; i < arr.length; i++) {
     minNum = Math.min(minNum, arr[i]);
   }
@@ -9,8 +10,9 @@ function getMin(arr) {
 }
 
 function getMax(arr) {
-  let maxNum = -Infinity;
+  if (arr.length === 0) return null;
 
+  let maxNum = -Infinity;
   for (let i = 0; i < arr.length; i++) {
     maxNum = Math.max(maxNum, arr[i]);
   }
@@ -18,6 +20,7 @@ function getMax(arr) {
   return maxNum;
 }
 
+// const arr = [];
 const arr = [34, 7, 23, 32, 5, 62];
 
 console.log("Minimum value is:", getMin(arr));
