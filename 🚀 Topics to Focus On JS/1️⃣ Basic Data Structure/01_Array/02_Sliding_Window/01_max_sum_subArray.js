@@ -1,4 +1,4 @@
-function slidingWindow(arr, w) {
+function maxSumSubArray(arr, w) {
   const len = arr.length;
 
   if (w > len) return null;
@@ -22,5 +22,5 @@ function slidingWindow(arr, w) {
 
 const arr = [3, 19, 2, 7, 5, 6, 12];
 const window = 4;
-const res = slidingWindow(arr, window);
+const res = maxSumSubArray(arr, window);
 console.log(res);
