@@ -9,8 +9,8 @@ function maxSumSubArray(arr, w) {
   }
 
   let max = curr;
-  for (let i = 1; i <= len - w; i++) {
-    curr = curr - arr[i - 1] + arr[i + w - 1];
+  for (let i = w; i < len; i++) {
+    curr = curr - arr[i - w] + arr[i];
 
     if (curr > max) {
       max = curr;
