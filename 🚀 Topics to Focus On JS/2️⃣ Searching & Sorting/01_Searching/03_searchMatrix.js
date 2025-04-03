@@ -1,4 +1,5 @@
 function searchMatrix(matrix, target) {
+  if (matrix.length === 0 || matrix[0].length === 0) return false;
   const m = matrix.length;
   const n = matrix[0].length;
   console.log(`${m} X ${n}`);
@@ -12,10 +13,9 @@ function searchMatrix(matrix, target) {
 
     let midNum = matrix[i][j];
 
-    if (target === midNum) return `ith row: ${i} and jth column: ${j}`;
+    if (target === midNum) return { row: i, column: j };
     target > midNum ? (start = mid + 1) : (end = mid - 1);
   }
-  
 }
 
 const matrix = [
