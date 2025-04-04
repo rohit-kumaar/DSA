@@ -16,6 +16,8 @@ function searchMatrix(matrix, target) {
     if (target === midNum) return { row: i, column: j };
     target > midNum ? (start = mid + 1) : (end = mid - 1);
   }
+
+  return false;
 }
 
 const matrix = [
