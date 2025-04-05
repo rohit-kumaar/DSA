@@ -30,5 +30,5 @@ int main()
     // int arr[] = {0,1,0};
     int arr[] = {0, 1, 10, 5, 2};
     int size = sizeof(arr) / sizeof(arr[0]);
-    cout << "Peak index in a mountain array is : " << peakIndexInAMountainArray(arr, size) << endl;
+    cout << "Peak index in a mountain array index is : " << peakIndexInAMountainArray(arr, size) << endl;
 }
