@@ -1,6 +1,4 @@
-function merge(arr, start, end, temp) {
-  let mid = Math.floor(start + (end - start) / 2);
-
+function merge(arr, start, mid, end, temp) {
   let i = start;
   let j = mid + 1;
   let k = start;
@@ -47,7 +45,7 @@ function mergeSort(arr, start, end, temp) {
   mergeSort(arr, mid + 1, end, temp);
 
   // merge the array
-  merge(arr, start, end, temp);
+  merge(arr, start, mid, end, temp);
 }
 
 const arr = [42, 3, 19, 8, 56, 1];
