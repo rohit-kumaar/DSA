@@ -1,19 +1,18 @@
 function peakIndex(arr) {
-  let start = 0;
-  let end = arr.length - 1;
+  let startIdx = 0;
+  let endIdx = arr.length - 1;
 
-  while (end > start) {
-    let mid = Math.floor(start + (end - start) / 2);
-    if (arr[mid + 1] > arr[mid]) {
-      start = mid + 1;
-    } else if (arr[mid + 1] < arr[mid]) {
-      end = mid;
+  while (startIdx < endIdx) {
+    let midIdx = Math.floor((startIdx + endIdx) / 2);
+
+    if (arr[midIdx] < arr[midIdx + 1]) {
+      startIdx = midIdx + 1;
     } else {
-      end--;
+      endIdx = midIdx;
     }
   }
 
-  return start;
+  return startIdx;
 }
 
 const arr = [1, 3, 7, 6, 6, 6, 6, 6, 6, 6, 5, 4, 3, 2, 1];
