@@ -5,6 +5,7 @@ int main()
 {
 
     int arr[3][4];
+    cout << "Enter a number and print column wise : " << endl;
 
     // column wish input
     for (int col = 0; col < 4; col++)

@@ -5,7 +5,7 @@ int main()
 {
 
     int arr[3][4];
-
+    cout << "Enter a number and print row wise : " << endl;
     // row wish input
     for (int row = 0; row < 3; row++)
     {
