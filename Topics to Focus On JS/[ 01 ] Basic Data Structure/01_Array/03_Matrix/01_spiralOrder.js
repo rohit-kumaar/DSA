@@ -6,42 +6,42 @@ function spiralOrder(arr) {
   const total = row * col;
 
   // index initialization
-  let startingRow = 0;
-  let startingCol = 0;
-  let endingRow = row - 1;
-  let endingCol = col - 1;
+  let left = 0;
+  let top = 0;
+  let bottom = row - 1;
+  let right = col - 1;
 
   // answer
   const ans = [];
 
   while (count < total) {
-    // print starting row
-    for (let i = startingCol; count < total && i <= endingCol; i++) {
-      ans.push(arr[startingRow][i]);
+    // left to right
+    for (let i = left; count < total && i <= right; i++) {
+      ans.push(arr[top][i]);
       count++;
     }
-    startingRow++;
+    top++;
 
-    // print ending column
-    for (let i = startingRow; count < total && i <= endingRow; i++) {
-      ans.push(arr[i][endingCol]);
+    // top to bottom
+    for (let i = top; count < total && i <= bottom; i++) {
+      ans.push(arr[i][right]);
       count++;
     }
-    endingCol--;
+    right--;
 
-    // print ending row
-    for (let i = endingCol; count < total && i >= startingCol; i--) {
-      ans.push(arr[endingRow][i]);
+    // right to left
+    for (let i = right; count < total && i >= left; i--) {
+      ans.push(arr[bottom][i]);
       count++;
     }
-    endingRow--;
+    bottom--;
 
-    // print starting column
-    for (let i = endingRow; count < total && i >= startingRow; i--) {
-      ans.push(arr[i][startingCol]);
+    // bottom to top
+    for (let i = bottom; count < total && i >= top; i--) {
+      ans.push(arr[i][left]);
       count++;
     }
-    startingCol++;
+    left++;
   }
 
   return ans;
