@@ -22,7 +22,7 @@ function twoDMatrix(arr) {
     console.log(sum);
   }
 
-  // row wise sum
+  // column wise sum
   for (let n = 0; n < col; n++) {
     let sum = 0;
     for (let m = 0; m < row; m++) {
