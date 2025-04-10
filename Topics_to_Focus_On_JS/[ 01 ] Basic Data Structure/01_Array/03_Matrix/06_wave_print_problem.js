@@ -1,15 +1,15 @@
 function wavePrint(arr, row, col) {
   const matrix = Array.from({ length: row }, () => new Array(col).fill(0));
-  let count = 0;
+  let idx = 0;
 
   for (let n = 0; n < col; n++) {
     if ((n & 1) === 1) {
       for (let m = row - 1; m >= 0; m--) {
-        matrix[m][n] = arr[count++];
+        matrix[m][n] = arr[idx++];
       }
     } else {
       for (let m = 0; m < row; m++) {
-        matrix[m][n] = arr[count++];
+        matrix[m][n] = arr[idx++];
       }
     }
   }
