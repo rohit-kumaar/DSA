@@ -1,4 +1,4 @@
-function printInRow(arr) {
+function printInCol(arr) {
   const row = 3;
   const col = 3;
   const t = Math.floor(Math.sqrt(arr.length));
@@ -15,6 +15,6 @@ function printInRow(arr) {
   return matrix;
 }
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-const res = printInRow(arr);
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const res = printInCol(arr);
 console.log(res);
