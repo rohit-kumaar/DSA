@@ -12,7 +12,7 @@ function pivot(arr) {
     midIdx = Math.floor((startIdx + endIdx) / 2);
   }
 
-  return arr[midIdx];
+  return arr[startIdx];
 }
 
 const arr = [6, 7, 8, 9, 1, 2, 3, 4, 5];
