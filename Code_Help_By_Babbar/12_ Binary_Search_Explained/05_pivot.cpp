@@ -19,7 +19,7 @@ int pivot(int arr[], int size)
         }
         midIdx = startIdx + (endIdx - startIdx) / 2;
     }
-    return arr[midIdx];
+    return arr[startIdx];
 }
 
 int main()
