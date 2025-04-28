@@ -1,6 +1,6 @@
 function pivot(arr) {
   let startIdx = 0;
-  let endIdx = arr.length;
+  let endIdx = arr.length - 1;
 
   while (startIdx < endIdx) {
     let midIdx = Math.floor((startIdx + endIdx) / 2);
