@@ -4,7 +4,7 @@ using namespace std;
 int getPivot(int arr[], int size)
 {
     int startIdx = 0;
-    int endIdx = size;
+    int endIdx = size - 1;
     int midIdx = startIdx + (endIdx - startIdx) / 2;
 
     while (startIdx < endIdx)
@@ -24,43 +24,47 @@ int getPivot(int arr[], int size)
     return startIdx;
 }
 
-int binarySearch(int arr[],int start, int end, int target)
+int binarySearch(int arr[], int start, int end, int target)
 {
-    int starIdx = start;
+    int startIdx = start;
     int endIdx = end;
-    int midIdx = starIdx + (endIdx - starIdx) / 2;
+    int midIdx = startIdx + (endIdx - startIdx) / 2;
 
-    while (starIdx <= endIdx)
+    while (startIdx <= endIdx)
     {
         if (target == arr[midIdx])
             return midIdx;
 
         if (target > arr[midIdx])
         {
-            starIdx = midIdx + 1;
+            startIdx = midIdx + 1;
         }
         else
         {
             endIdx = midIdx - 1;
         }
 
-        midIdx = starIdx + (endIdx - starIdx) / 2;
+        midIdx = startIdx + (endIdx - startIdx) / 2;
     }
 
-    return starIdx;
+    return -1;
 }
 
 int main()
 {
     int arr[] = {8, 10, 17, 1, 3};
+    int n = 5;
     int pivot = getPivot(arr, 5);
     int targetKey = 17;
-    if (targetKey >= pivot && targetKey <= arr[5])
+    int ans = -1;
+    if (targetKey >= arr[pivot] && targetKey <= arr[n - 1])
     {
-        cout << "The search value key is : " << binarySearch(arr, pivot, arr[5], targetKey) << endl;
+        ans = binarySearch(arr, pivot, n - 1, targetKey);
     }
     else
     {
-        cout << "The search value key is : " << binarySearch(arr, 0, pivot - 1, targetKey) << endl;
+        ans = binarySearch(arr, 0, pivot - 1, targetKey);
     }
+
+    cout << "The search value key is at index: " << ans << endl;
 }
