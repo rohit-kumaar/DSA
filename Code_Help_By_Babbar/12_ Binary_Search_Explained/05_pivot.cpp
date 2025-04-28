@@ -4,11 +4,12 @@ using namespace std;
 int pivot(int arr[], int size)
 {
     int startIdx = 0;
-    int endIdx = size;
-    int midIdx = startIdx + (endIdx - startIdx) / 2;
+    int endIdx = size - 1;
 
     while (startIdx < endIdx)
     {
+        int midIdx = startIdx + (endIdx - startIdx) / 2;
+
         if (arr[midIdx] >= arr[0])
         {
             startIdx = midIdx + 1;
@@ -17,7 +18,6 @@ int pivot(int arr[], int size)
         {
             endIdx = midIdx;
         }
-        midIdx = startIdx + (endIdx - startIdx) / 2;
     }
     return arr[startIdx];
 }
