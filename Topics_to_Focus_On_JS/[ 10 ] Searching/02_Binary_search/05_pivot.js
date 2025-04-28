@@ -1,15 +1,15 @@
 function pivot(arr) {
   let startIdx = 0;
   let endIdx = arr.length;
-  let midIdx = Math.floor((startIdx + endIdx) / 2);
 
   while (startIdx < endIdx) {
+    let midIdx = Math.floor((startIdx + endIdx) / 2);
+
     if (arr[midIdx] >= arr[0]) {
       startIdx = midIdx + 1;
     } else {
       endIdx = midIdx;
     }
-    midIdx = Math.floor((startIdx + endIdx) / 2);
   }
 
   return arr[startIdx];
