@@ -1,11 +1,8 @@
 function removeStars(str) {
   const stack = [];
+
   for (const ch of str) {
-    if (ch === "*") {
-      stack.pop();
-    } else {
-      stack.push(ch);
-    }
+    ch === "*" ? stack.pop() : stack.push(ch);
   }
 
   return stack.join("");
