@@ -3,11 +3,9 @@ function fourSum(arr, target) {
   const answer = [];
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) break;
     if (i > 0 && arr[i] === arr[i - 1]) continue;
 
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] > 0) break;
       if (j > i + 1 && arr[j] === arr[j - 1]) continue;
 
       let lo = j + 1;
