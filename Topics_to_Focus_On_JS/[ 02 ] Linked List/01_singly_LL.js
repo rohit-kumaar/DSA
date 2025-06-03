@@ -1,3 +1,5 @@
+/*
+
 // LinkedList class
 class LinkedList {
   constructor() {
@@ -67,3 +69,55 @@ console.log(list.search(20));
 
 list.reverse();
 console.log(list.display());
+
+*/
+
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
+class SinglyLinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  append(data) {
+    const newNode = new Node(data);
+
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      let current = this.head;
+
+      while (current.next) {
+        current = current.next;
+      }
+
+      current.next = newNode;
+    }
+
+    this.size++;
+  }
+
+  printList() {
+    let current = this.head;
+    let result = "";
+    console.log(current);
+
+    while (current) {
+      result = result + current.data + " --> ";
+      current = current.next;
+    }
+
+    return result + "null";
+  }
+}
+
+const list = new SinglyLinkedList();
+list.append(10);
+// list.append(20);
+console.log(list.printList());
