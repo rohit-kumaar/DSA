@@ -85,6 +85,7 @@ class SinglyLinkedList {
     this.size = 0;
   }
 
+  // Add a node at the end
   append(data) {
     const newNode = new Node(data);
 
@@ -103,6 +104,15 @@ class SinglyLinkedList {
     this.size++;
   }
 
+  // Add a node at the beginning
+  prepend(data) {
+    let newNode = new Node(data);
+    newNode.next = this.head;
+    this.head = newNode;
+    this.size++;
+  }
+
+  // Print the list
   printList() {
     let current = this.head;
     let result = "";
@@ -119,5 +129,6 @@ class SinglyLinkedList {
 
 const list = new SinglyLinkedList();
 list.append(10);
-// list.append(20);
+list.append(20);
+list.prepend(5);
 console.log(list.printList());
