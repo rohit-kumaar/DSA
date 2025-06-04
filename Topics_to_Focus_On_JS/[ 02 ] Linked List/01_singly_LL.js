@@ -152,12 +152,14 @@ class SinglyLinkedList {
           previous.next = current.next;
         }
         this.size--;
-        return;
+        return true;
       }
 
       previous = current;
       current = current.next;
     }
+
+    return false;
   }
 
   // Print the list
@@ -189,7 +191,7 @@ list.prepend(5);
 list.append(40);
 list.insertAt(30, 3);
 list.insertAt(50, 3);
-list.remove(50);
+console.log(list.remove(50));
 console.log(list.printList());
 console.log(list.getSize());
 console.log(list.isEmpty());
