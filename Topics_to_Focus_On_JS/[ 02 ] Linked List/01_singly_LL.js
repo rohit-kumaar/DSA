@@ -112,11 +112,37 @@ class SinglyLinkedList {
     this.size++;
   }
 
+  // Insert at a specific index
+  insertAt(data, index) {
+    if (index < 0 || index > this.size) return;
+
+    let newNode = new Node(data);
+
+    if (index === 0) {
+      newNode.next = this.head;
+      this.head = newNode;
+    } else {
+      let current = this.head;
+      let previous;
+      let i = 0;
+
+      while (i < index) {
+        previous = current;
+        current = current.next;
+        i++;
+      }
+
+      newNode.next = current;
+      previous.next = newNode;
+    }
+
+    this.size++;
+  }
+
   // Print the list
   printList() {
     let current = this.head;
     let result = "";
-    console.log(current);
 
     while (current) {
       result = result + current.data + " --> ";
@@ -131,4 +157,6 @@ const list = new SinglyLinkedList();
 list.append(10);
 list.append(20);
 list.prepend(5);
+list.append(40);
+list.insertAt(30, 3);
 console.log(list.printList());
