@@ -139,6 +139,27 @@ class SinglyLinkedList {
     this.size++;
   }
 
+  // Remove a node by value
+  remove(data) {
+    let current = this.head;
+    let previous = null;
+
+    while (current) {
+      if (current.data === data) {
+        if (previous === null) {
+          this.head = current.next;
+        } else {
+          previous.next = current.next;
+        }
+        this.size--;
+        return;
+      }
+
+      previous = current;
+      current = current.next;
+    }
+  }
+
   // Print the list
   printList() {
     let current = this.head;
@@ -159,4 +180,6 @@ list.append(20);
 list.prepend(5);
 list.append(40);
 list.insertAt(30, 3);
+list.insertAt(50, 3);
+list.remove(50);
 console.log(list.printList());
