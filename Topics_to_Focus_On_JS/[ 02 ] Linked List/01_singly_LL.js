@@ -172,6 +172,14 @@ class SinglyLinkedList {
 
     return result + "null";
   }
+
+  getSize() {
+    return this.size;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
 }
 
 const list = new SinglyLinkedList();
@@ -183,3 +191,5 @@ list.insertAt(30, 3);
 list.insertAt(50, 3);
 list.remove(50);
 console.log(list.printList());
+console.log(list.getSize());
+console.log(list.isEmpty());
