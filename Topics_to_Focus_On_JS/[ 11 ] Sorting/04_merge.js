@@ -1,48 +1,51 @@
-function merge(arr, start, mid, end, sortedArray) {
-  let i = start;
-  let j = mid + 1;
-  let k = start;
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr;
 
-  while (i <= mid && j <= end) {
-    if (arr[i] <= arr[j]) {
-      sortedArray[k] = arr[i];
-      k++;
-      i++;
-    } else {
-      sortedArray[k] = arr[j];
-      k++;
-      j++;
+  // Create a temporary array once
+  const temp = new Array(arr.length);
+
+  // Start the recursive sorting
+  function sort(start, end) {
+    if (start >= end) return;
+
+    const mid = Math.floor((start + end) / 2);
+
+    sort(start, mid); // sort left
+    sort(mid + 1, end); // sort right
+    merge(start, mid, end); // merge them
+  }
+
+  function merge(start, mid, end) {
+    let i = start;
+    let j = mid + 1;
+    let k = start;
+
+    // Copy current range to temp
+    for (let p = start; p <= end; p++) {
+      temp[p] = arr[p];
     }
+
+    // Merge from temp back to arr
+    while (i <= mid && j <= end) {
+      if (temp[i] <= temp[j]) {
+        arr[k++] = temp[i++];
+      } else {
+        arr[k++] = temp[j++];
+      }
+    }
+
+    while (i <= mid) {
+      arr[k++] = temp[i++];
+    }
+
+    // No need for last while(j <= end) — already in place in temp
+    // But we don't need to copy remaining right part — it's already in arr
   }
 
-  while (i <= mid) {
-    sortedArray[k] = arr[i];
-    k++;
-    i++;
-  }
-
-  while (j <= end) {
-    sortedArray[k] = arr[j];
-    k++;
-    j++;
-  }
-
-  for (let i = start; i <= end; i++) {
-    arr[i] = sortedArray[i];
-  }
+  sort(0, arr.length - 1);
+  return arr;
 }
 
-function mergeSort(arr, start, end, sortedArray) {
-  if (start >= end) return;
-  let mid = Math.floor((start + end) / 2);
-  mergeSort(arr, start, mid, sortedArray); // sort left side
-  mergeSort(arr, mid + 1, end, sortedArray); // sort right side
-  merge(arr, start, mid, end, sortedArray); // merge both the sorted array
-}
-
-const arr = [42, 3, 19, 8, 56, 1];
-const start = 0;
-const end = arr.length - 1;
-const sortedArray = new Array(arr.length);
-mergeSort(arr, start, end, sortedArray);
+const arr = [5, 3, 8, 1];
+mergeSort(arr);
 console.log(arr);
