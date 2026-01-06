@@ -1,4 +1,4 @@
-const iimf = (function () {
+const iife = (function () {
   return {
     add: function (a, b) {
       return a + b;
@@ -9,5 +9,5 @@ const iimf = (function () {
   };
 })();
 
-console.log(iimf.add(2, 3));
-console.log(iimf.subtract(5, 2));
+console.log(iife.add(2, 3));
+console.log(iife.subtract(5, 2));
