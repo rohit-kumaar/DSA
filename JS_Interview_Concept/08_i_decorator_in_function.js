@@ -1,4 +1,10 @@
-// A decorator is a function that wraps another function or modify its behavior without changing its original structure.
+/* JavaScript
+A decorator is a function that wraps another function or modify its behavior.
+*/
+
+/* Angular
+Decorators provide a way to add metadata or modify the behavior of classes, methods, properties, getters/setters, or fields using a declarative @ syntax. They are inspired by languages like Python and are mainly used for meta-programming.
+*/
 
 function heavy(x) {
   console.log(x + " : heavy");
@@ -11,11 +17,11 @@ function memoize(fs) {
   return function (x) {
     if (map.has(x)) {
       return map.get(x);
-    } else {
-      const result = fs(x);
-      map.set(x, result);
-      return result;
     }
+
+    const result = fs(x);
+    map.set(x, result);
+    return result;
   };
 }
 
