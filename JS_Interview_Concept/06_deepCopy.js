@@ -1,19 +1,14 @@
-const address = {
-  city: "Rourkela",
-  area: 51,
-};
-
-const person = {
+const user = {
   name: "Rohit Kumar",
-  address: address,
+  experience: {
+    2016: "Auto Industry",
+    2021: "IT Industry",
+  },
 };
 
-const dCopyPerson = JSON.parse(JSON.stringify(person));
-console.log(person);
-console.log(dCopyPerson);
-dCopyPerson.name = "Ricky";
-console.log(person);
-console.log(dCopyPerson);
-dCopyPerson.address.city = "Sundergarh";
-console.log(person);
-console.log(dCopyPerson); // change city
+const deepCopy = JSON.parse(JSON.stringify(user));
+deepCopy.name = "Rohit Kumar Singh";
+deepCopy.experience[2016] = "Auto Industry In Pune";
+
+console.log("user :>> ", user);
+console.log("deepCopy :>> ", deepCopy);
