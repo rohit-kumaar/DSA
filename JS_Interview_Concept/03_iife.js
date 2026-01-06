@@ -1,13 +1,9 @@
-const iife = (function () {
+const calculator = (function () {
   return {
-    add: function (a, b) {
-      return a + b;
-    },
-    subtract: function (a, b) {
-      return a - b;
-    },
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
   };
 })();
 
-console.log(iife.add(2, 3));
-console.log(iife.subtract(5, 2));
+console.log(calculator.add(2, 3));
+console.log(calculator.subtract(5, 2));
