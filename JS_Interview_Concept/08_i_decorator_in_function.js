@@ -2,6 +2,25 @@
 A decorator is a function that wraps another function or modify its behavior.
 */
 
+const routers = [];
+
+function findAll() {
+  console.log("Get all Users");
+}
+
+function Get(path = "") {
+  return function (handlerFunction) {
+    routers.push({
+      method: "GET",
+      path: path,
+      handler: handlerFunction,
+    });
+  };
+}
+
+const users = Get("/users")(findAll);
+console.log(routers);
+
 /* Angular
 Decorators provide a way to add metadata or modify the behavior of classes, methods, properties, getters/setters, or fields using a declarative @ syntax. They are inspired by languages like Python and are mainly used for meta-programming.
 */
