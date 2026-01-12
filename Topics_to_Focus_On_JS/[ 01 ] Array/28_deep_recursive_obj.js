@@ -2,7 +2,7 @@ const company = {
   name: "TechCorp",
   departments: {
     engineering: {
-      manager: "Ankit",
+      manager: "Rohit",
       employees: [
         { id: 1, name: "Ravi" },
         { id: 2, name: "Neha" },

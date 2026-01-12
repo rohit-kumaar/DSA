@@ -1,3 +1,11 @@
+/*
+Getter = special function that runs automatically
+when someone reads (gets) the property
+
+Setter = special function that runs automatically
+when someone changes (sets) the property
+*/
+
 class Circle {
   constructor(radius) {
     this._radius = radius;
