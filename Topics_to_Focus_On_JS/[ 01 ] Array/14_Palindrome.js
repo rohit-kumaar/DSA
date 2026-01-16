@@ -1,17 +1,23 @@
-let str = "Madam";
+const str = "madam";
 
-function palindrome(str) {
-  str = str.toLowerCase();
+function isPalindrome(str) {
+  let isPalindrome = true;
 
-  let result = "";
+  let left = 0;
+  let right = str.length - 1;
 
-  for (let i = 0; i < str.length; i++) {
-    result = str[i] + result;
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      isPalindrome = false;
+      break;
+    }
+
+    left++;
+    right--;
   }
 
-  return str === result ? true : false;
+  return isPalindrome;
 }
 
-console.time();
-console.log(palindrome(str));
-console.timeEnd();
+const res = isPalindrome(str);
+console.log(res);
